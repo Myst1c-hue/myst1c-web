@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYST1C | Elite Influencer Agency</title>
+    <style>
+        /* ESTILO BASE */
+        body {
+            background-color: #000000;
+            background-image: url('MYST1C.jpg'); 
+            background-repeat: repeat;
+            background-position: center;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.93); 
+            z-index: -1;
+        }
+
+        /* TÍTULO REDISEÑADO (MÁS ATRACTIVO) */
+        header {
+            padding: 120px 20px 60px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #fff 0%, #444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(255,255,255,0.2));
+            font-weight: 900;
+        }
+        p.subtitle {
+            font-size: 1rem;
+            color: #00E701;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 15px;
+            font-weight: 300;
+        }
+
+        /* TARJETAS DE INFLUENCERS */
+        .influencers {
+            padding: 40px 20px;
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: rgba(15, 15, 15, 0.7);
+            border: 1px solid #222;
+            border-radius: 24px;
+            padding: 30px;
+            width: 370px;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(12px);
+        }
+        .card:hover {
+            border-color: #00E701;
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .photo-container {
+            width: 100%;
+            aspect-ratio: 3/4;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .photo-container img { width: 100%; height: 100%; object-fit: cover; }
+        .card h3 { margin-bottom: 20px; font-size: 2rem; text-align: center; }
+
+        .social-list { list-style: none; padding: 0; margin: 0; }
+        .social-list a { 
+            display: flex; align-items: center; text-decoration: none; 
+            color: #aaa; margin-bottom: 15px; padding: 10px;
+            border-radius: 10px; background: rgba(255,255,255,0.03);
+            transition: 0.3s;
+        }
+        .social-list a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+        .social-logo { width: 20px; height: 20px; margin-right: 15px; }
+
+        /* CONTACTO REDISEÑADO (TIPO BOTONES) */
+        .contact {
+            padding: 100px 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 900px;
+        }
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .contact-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #222;
+            padding: 25px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+            backdrop-filter: blur(5px);
+        }
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateY(-5px);
+        }
+        .contact-item.tg:hover { border-color: #0088cc; box-shadow: 0 0 20px rgba(0, 136, 204, 0.2); }
+        .contact-item.ig:hover { border-color: #e1306c; box-shadow: 0 0 20px rgba(225, 48, 108, 0.2); }
+        
+        .contact-icon-large {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 15px;
+            fill: #fff;
+        }
+        .contact-label {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        .contact-value { font-weight: 600; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MYST1C</h1>
+        <p class="subtitle">Representante de influencers</p>
+    </header>
+
+    <section class="influencers">
+        <div class="card">
+            <div class="photo-container"><img src="laplebe.jpg" alt="La Plebe"></div>
+            <h3>La Plebe</h3>
+            <div class="social-list">
+                <a href="#"><svg class="social-logo" style="fill:#00E701" viewBox="0 0 24 24"><path d="M3 3h6v3h3v3h3v3h-3v3h-3v3H3V3zm15 0h3v18h-3V3z"/></svg> LaPlebee</a>
+                <a href="#"><svg class="social-logo" style="fill:#FF0000" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z"/></svg> La Plebe Timba</a>
+                <a href="#"><svg class="social-logo" style="fill:#fff" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> LaPlebekick</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="photo-container"><img src="tu7ee.jpg" alt="TU7EE"></div>
+            <h3>TU7EE</h3>
+            <div class="social-list">
+                <a href="#"><svg class="social-logo" style="fill:#00E701" viewBox="0 0 24 24"><path d="M3 3h6v3h3v3h3v3h-3v3h-3v3H3V3zm15 0h3v18h-3V3z"/></svg> TU7EE</a>
+                <a href="#"><svg class="social-logo" style="fill:#FF0000" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z"/></svg> TU7EE</a>
+                <a href="#"><svg class="social-logo" style="fill:#fff" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> tutemillano</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Únete a la Élite</h2>
+        <div class="contact-grid">
+            <a href="mailto:management@myst1c.com" class="contact-item">
+                <svg class="contact-icon-large" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                <span class="contact-label">Email Oficial</span>
+                <span class="contact-value">management@myst1c.com</span>
+            </a>
+            <a href="https://t.me/Myst1cBusiness" class="contact-item tg" target="_blank">
+                <svg class="contact-icon-large" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.462 15.591c-.181.246-.735.812-1.341 1.292-.83.659-1.588.873-2.19.873-1.578 0-2.646-1.162-4.432-2.845-1.061-1.002-3.133-2.963-3.133-2.963s-.638-.57-.331-1.011c.152-.219.64-.537.64-.537l9.446-4.004c.542-.23.831-.026.883.071.11.201.066.841-.192 1.838l-1.347 5.234c-.128.526-.063.858.11 1.054.129.145.44.301.887.21.361-.074.891-.43 1.144-.652.253-.222.196-.402.196-.402s-.016-.363-.44-.164z"/></svg>
+                <span class="contact-label">Telegram Directo</span>
+                <span class="contact-value">@Myst1cBusiness</span>
+            </a>
+            <a href="https://instagram.com/7Myst1c" class="contact-item ig" target="_blank">
+                <svg class="contact-icon-large" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <span class="contact-label">Instagram</span>
+                <span class="contact-value">7Myst1c</span>
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
